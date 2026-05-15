@@ -14,3 +14,13 @@ Fri May 15 06:32:06 PM UTC 2026:
  tests:  0|6
 ========================================
 55a37ec
+Fri May 15 06:41:11 PM UTC 2026: 
+ graph.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:55:22: error: initialization of ‘Edge *’ from incompatible pointer type ‘void * (*)(List *)’ [-Wincompatible-pointer-types]
+   55 |         Edge* edge = list_first;
+      |                      ^~~~~~~~~~
+174bd2d
