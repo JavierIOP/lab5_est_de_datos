@@ -100,3 +100,24 @@ Mon May 18 03:04:23 AM UTC 2026:
  1 file changed, 4 insertions(+)
  tests:  0|0
 b55c637
+Mon May 18 03:07:06 AM UTC 2026: 
+ graph.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:65:5: error: unknown type name ‘MApPair’; did you mean ‘MapPair’?
+   65 |     MApPair* p = map_search(g->adjacencyMap, (void*)label);
+      |     ^~~~~~~
+      |     MapPair
+graph.c:65:18: error: initialization of ‘int *’ from incompatible pointer type ‘MapPair *’ [-Wincompatible-pointer-types]
+   65 |     MApPair* p = map_search(g->adjacencyMap, (void*)label);
+      |                  ^~~~~~~~~~
+graph.c:67:20: error: request for member ‘value’ in something not a structure or union
+   67 |     return (List*)p->value;
+      |                    ^~
+graph.c:68:1: error: control reaches end of non-void function [-Werror=return-type]
+   68 | }
+      | ^
+cc1: all warnings being treated as errors
+9b8f7bb
