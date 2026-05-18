@@ -56,3 +56,21 @@ Mon May 18 02:50:08 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 e3e7a30
+Mon May 18 02:56:08 AM UTC 2026: 
+ graph.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:38:8: error: too few arguments to function ‘map_search’
+   38 |     if(map_search(g->adjacencyMap), (void*)label) return;
+      |        ^~~~~~~~~~
+In file included from graph.c:8:
+map.h:22:10: note: declared here
+   22 | MapPair *map_search(Map *map, void *key);
+      |          ^~~~~~~~~~
+graph.c:38:35: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   38 |     if(map_search(g->adjacencyMap), (void*)label) return;
+      |                                   ^
+cc1: all warnings being treated as errors
+07d6b91
