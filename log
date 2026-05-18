@@ -127,3 +127,18 @@ Mon May 18 03:07:25 AM UTC 2026:
  tests:  12|0
 ========================================
 a5d0962
+Mon May 18 03:14:57 AM UTC 2026: 
+ graph.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:90:5: error: variable ‘edges’ has initializer but incomplete type
+   90 |     List* adj = list_create(), edges = (List*)p->value;
+      |     ^~~~
+graph.c:90:32: error: storage size of ‘edges’ isn’t known
+   90 |     List* adj = list_create(), edges = (List*)p->value;
+      |                                ^~~~~
+graph.c:90:32: error: unused variable ‘edges’ [-Werror=unused-variable]
+cc1: all warnings being treated as errors
+125f122
