@@ -79,3 +79,14 @@ Mon May 18 02:56:57 AM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 58d0f1f
+Mon May 18 03:01:46 AM UTC 2026: 
+ graph.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:47:9: error: ‘pair’ undeclared (first use in this function)
+   47 |     if(!pair) return;
+      |         ^~~~
+graph.c:47:9: note: each undeclared identifier is reported only once for each function it appears in
+e3938eb
